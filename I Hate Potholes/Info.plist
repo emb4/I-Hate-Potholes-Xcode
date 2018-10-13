@@ -28,6 +28,8 @@
 	<string>We need to access your camera to get a picture of those pesky potholes!</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We need library access to find those picture of those pesky potholes</string>
+	<key>NSLocationUsageDescription</key>
+	<string>We need access to your location to find your address</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
