@@ -21,7 +21,7 @@
                                 <rect key="frame" x="38" y="377" width="245" height="30"/>
                                 <state key="normal" title="I already have a picture of a pothole"/>
                                 <connections>
-                                    <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXe-o9-V1P"/>
+                                    <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNX-OR-Clj"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Bu-TsA">
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="97" y="339" width="126" height="30"/>
                                 <state key="normal" title="I Found A Pothole!"/>
                                 <connections>
-                                    <action selector="takeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9h-Qi-OEN"/>
+                                    <action selector="takeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsU-hf-nD4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,6 +50,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lets get started..." id="yAC-vT-4qK">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="Bhh-rk-l85">
+                            <connections>
+                                <segue destination="7U3-jJ-Cqf" kind="show" id="y2s-ri-WJs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Location" id="W2E-sh-C9H">
                             <connections>
                                 <segue destination="HPV-7f-rTn" kind="show" id="baM-i3-Fs3"/>
@@ -66,10 +71,84 @@
             </objects>
             <point key="canvasLocation" x="1132.5" y="132.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
+        <scene sceneID="PmG-VT-tnQ">
+            <objects>
+                <viewController id="7U3-jJ-Cqf" customClass="Profile" customModule="I_Hate_Potholes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJO-9f-OQA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2E-tI-sNp">
+                                <rect key="frame" x="16" y="86" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OQ-B9-Sa4">
+                                <rect key="frame" x="16" y="153" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1x-pa-8SC">
+                                <rect key="frame" x="16" y="115" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="honorifix-prefix"/>
+                                <connections>
+                                    <action selector="firstName:" destination="7U3-jJ-Cqf" eventType="editingDidEnd" id="YhE-tD-hFP"/>
+                                    <action selector="firstNameInput:" destination="7U3-jJ-Cqf" eventType="editingDidEnd" id="Xj5-t1-GUd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFX-yF-ARO">
+                                <rect key="frame" x="16" y="182" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="honorifix-suffix"/>
+                                <connections>
+                                    <action selector="lastName:" destination="7U3-jJ-Cqf" eventType="editingDidEnd" id="UjB-rH-PsD"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLh-Ji-oIz">
+                                <rect key="frame" x="16" y="220" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7u3-jS-LJ2">
+                                <rect key="frame" x="16" y="249" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                <connections>
+                                    <action selector="phoneNumber:" destination="7U3-jJ-Cqf" eventType="editingDidEnd" id="GBw-sj-jek"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5xE-J5-CrD"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameField" destination="X1x-pa-8SC" id="hdz-pU-ILR"/>
+                        <outlet property="lastNameField" destination="vFX-yF-ARO" id="c8p-q3-TNU"/>
+                        <outlet property="phoneNumberField" destination="7u3-jS-LJ2" id="yJq-mj-r2u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1W-Kx-hHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="930"/>
+        </scene>
+        <!--Location View-->
         <scene sceneID="RuG-xF-gak">
             <objects>
-                <viewController storyboardIdentifier="edit" id="HPV-7f-rTn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location" id="HPV-7f-rTn" customClass="LocationView" customModule="I_Hate_Potholes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Slh-ZO-5m6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +197,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Tg-HD-w3S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LnN-8z-EQg">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

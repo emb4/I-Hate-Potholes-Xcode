@@ -16,6 +16,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBOutlet weak var photosButton: UIButton!
     
+    
     @IBAction func takeImage(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -50,6 +51,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         {
             imageView.image = image
+            Report.image = image
         }
         else
         {

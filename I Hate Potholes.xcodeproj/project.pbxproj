@@ -12,6 +12,8 @@
 		E14755CB21727CB100E950AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14755C921727CB100E950AE /* Main.storyboard */; };
 		E14755CD21727CB200E950AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14755CC21727CB200E950AE /* Assets.xcassets */; };
 		E14755D021727CB300E950AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14755CE21727CB300E950AE /* LaunchScreen.storyboard */; };
+		E1EEA6DA217429A400EC9073 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EEA6D9217429A400EC9073 /* Profile.swift */; };
+		E1EEA6DC21742CC300EC9073 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EEA6DB21742CC300EC9073 /* LocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E14755CC21727CB200E950AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E14755CF21727CB300E950AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E14755D121727CB300E950AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1EEA6D9217429A400EC9073 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		E1EEA6DB21742CC300EC9073 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				E14755C521727CB100E950AE /* AppDelegate.swift */,
 				E14755C721727CB100E950AE /* ViewController.swift */,
+				E1EEA6DB21742CC300EC9073 /* LocationView.swift */,
+				E1EEA6D9217429A400EC9073 /* Profile.swift */,
 				E14755C921727CB100E950AE /* Main.storyboard */,
 				E14755CC21727CB200E950AE /* Assets.xcassets */,
 				E14755CE21727CB300E950AE /* LaunchScreen.storyboard */,
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14755C821727CB100E950AE /* ViewController.swift in Sources */,
+				E1EEA6DC21742CC300EC9073 /* LocationView.swift in Sources */,
+				E1EEA6DA217429A400EC9073 /* Profile.swift in Sources */,
 				E14755C621727CB100E950AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
